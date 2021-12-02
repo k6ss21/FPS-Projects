@@ -393,6 +393,7 @@
 "Assets/Enemy/EnemyAI.cs"
 "Assets/Enemy/EnemyAttack.cs"
 "Assets/Enemy/EnemyHealth.cs"
+"Assets/LevelController.cs"
 "Assets/Player/PlayerHealth.cs"
 "Assets/Player/Weapons.cs"
 -langversion:8.0

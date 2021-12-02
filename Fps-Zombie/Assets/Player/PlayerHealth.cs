@@ -6,9 +6,12 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] int p_Health = 100;
     [SerializeField] int curr_p_Health = 0;
-
-    void Awake()
+    [SerializeField] GameObject endGameUI;
+    
+     void Start()
     {
+        
+        endGameUI.SetActive(false);
         curr_p_Health = p_Health;
     }
 
@@ -16,8 +19,8 @@ public class PlayerHealth : MonoBehaviour
     {
         curr_p_Health -= damage;
         if (curr_p_Health <= 0)
-        {
-            Debug.Log("Game Over");
+        {       
+            endGameUI.SetActive(true);         
         }
     }
 }
