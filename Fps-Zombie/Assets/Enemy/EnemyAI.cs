@@ -54,6 +54,11 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    public void OnDamageTaken()
+    {
+        isProvoked = true;
+    }
+
     void ChaseTarget()
     {
         _Animator.SetTrigger("Move");
@@ -63,7 +68,7 @@ public class EnemyAI : MonoBehaviour
     void AttackTarget()
     {
         _Animator.SetBool("Attack",true);
-        Debug.Log(name + "is Destroying" + target.name);
+        //Debug.Log(name + "is Destroying" + target.name);
     }
     void OnDrawGizmosSelected()
     {

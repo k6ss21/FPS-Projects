@@ -394,8 +394,11 @@
 "Assets/Enemy/EnemyAttack.cs"
 "Assets/Enemy/EnemyHealth.cs"
 "Assets/LevelController.cs"
+"Assets/Player/DeathHandler.cs"
 "Assets/Player/PlayerHealth.cs"
-"Assets/Player/Weapons.cs"
+"Assets/Weapon/Ammo.cs"
+"Assets/Weapon/Weapons.cs"
+"Assets/Weapon/WeaponZoom.cs"
 -langversion:8.0
 
 /deterministic

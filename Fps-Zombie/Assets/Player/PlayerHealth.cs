@@ -6,12 +6,10 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] int p_Health = 100;
     [SerializeField] int curr_p_Health = 0;
-    [SerializeField] GameObject endGameUI;
-    
-     void Start()
+
+
+    void Start()
     {
-        
-        endGameUI.SetActive(false);
         curr_p_Health = p_Health;
     }
 
@@ -19,8 +17,8 @@ public class PlayerHealth : MonoBehaviour
     {
         curr_p_Health -= damage;
         if (curr_p_Health <= 0)
-        {       
-            endGameUI.SetActive(true);         
+        {
+            GetComponent<DeathHandler>().AfterDeath();
         }
     }
 }

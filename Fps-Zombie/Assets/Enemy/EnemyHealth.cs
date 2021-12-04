@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        BroadcastMessage("OnDamageTaken");
         currentHealth -= damage;
         Debug.Log("health" + currentHealth);
         if (currentHealth <= 0)
