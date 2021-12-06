@@ -319,6 +319,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
+"Assets/Assets/Low Poly Guns/Scripts/GunsMenu.cs"
+"Assets/Assets/Low Poly Guns/Scripts/GunView.cs"
 "Assets/Assets/Standard Assets/Cameras/Scripts/AbstractTargetFollower.cs"
 "Assets/Assets/Standard Assets/Cameras/Scripts/AutoCam.cs"
 "Assets/Assets/Standard Assets/Cameras/Scripts/FreeLookCam.cs"
@@ -394,10 +396,13 @@
 "Assets/Enemy/EnemyAttack.cs"
 "Assets/Enemy/EnemyHealth.cs"
 "Assets/LevelController.cs"
+"Assets/Pickups/AmmoPickup.cs"
 "Assets/Player/DeathHandler.cs"
 "Assets/Player/PlayerHealth.cs"
 "Assets/Weapon/Ammo.cs"
+"Assets/Weapon/Ammotype.cs"
 "Assets/Weapon/Weapons.cs"
+"Assets/Weapon/WeaponSwitcher.cs"
 "Assets/Weapon/WeaponZoom.cs"
 -langversion:8.0
 

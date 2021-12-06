@@ -12,14 +12,11 @@ public class WeaponZoom : MonoBehaviour
     [SerializeField] float zoomedInSens = 1f;
     [SerializeField] float zoomedOutSens = 2f;
 
-    RigidbodyFirstPersonController fpsController;
+    [SerializeField] RigidbodyFirstPersonController fpsController;
 
     bool zoomInToggle = false;
 
-    private void Start()
-    {
-        fpsController = GetComponent<RigidbodyFirstPersonController>();
-    }
+    
     void Update()
     {
         if (Input.GetMouseButtonDown(1))
