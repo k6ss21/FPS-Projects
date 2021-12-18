@@ -11,6 +11,8 @@ public class Ammo : MonoBehaviour
     {
         public Ammotype ammotype;
         public int ammoAmount;
+        //delete
+        public AudioClip audioClip;
     }
 
     public int GetCurrentAmmo(Ammotype ammotype)
@@ -41,5 +43,10 @@ public class Ammo : MonoBehaviour
             }
         }
         return null;
+    }
+
+    //delete
+    public object GetAudioClip(Ammotype ammotype){
+        return GetAmmoSlot(ammotype).audioClip;
     }
 }

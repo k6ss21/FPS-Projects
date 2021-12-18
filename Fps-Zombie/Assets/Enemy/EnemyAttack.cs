@@ -15,5 +15,6 @@ public class EnemyAttack : MonoBehaviour
     {
         if(target == null){return;}
         target.TakeDamageFromEnemy(damage);
+        target.GetComponent<DisplayDamage>().DisplayBlood();
     }
 }

@@ -15,8 +15,9 @@ public class LevelController : MonoBehaviour
 
        // gameEndUI.SetActive(false);
     }
-    public void Mainmenu()
+    public void QuitGame()
     {
-        Debug.Log(" Load Main Menu");
+        Application.Quit();
     }
+    
 }

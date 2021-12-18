@@ -10,6 +10,15 @@ public class DeathHandler : MonoBehaviour
         
         endGameUI.enabled = false;
     }
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            
+            endGameUI.enabled = !endGameUI.enabled;
+            
+        }
+    }
 
    public void AfterDeath()
    {

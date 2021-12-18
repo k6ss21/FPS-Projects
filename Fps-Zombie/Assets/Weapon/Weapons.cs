@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Weapons : MonoBehaviour
 {
@@ -13,28 +14,40 @@ public class Weapons : MonoBehaviour
     [SerializeField] Ammotype ammotype;
 
     [SerializeField] float timeBetweenShots = .5f;
+    [SerializeField] TextMeshProUGUI ammoText;
 
     bool canShoot = true;
-
+    [SerializeField]AudioClip clip;
+    AudioSource audioSource;
     void OnEnable()
     {
         FPCamera.fieldOfView =60f;
         canShoot = true;
     }
+    void Start()
+    {
+        audioSource = GetComponentInParent<AudioSource>();
+    }
     void Update()
     {
+        DisplayAmmo();
         if (Input.GetButtonDown("Fire1") && canShoot == true)
         {
 
             StartCoroutine(Shoot());
         }
+
     }
 
     IEnumerator Shoot()
     {
         canShoot = false;
+       
         if (ammoSlot.GetCurrentAmmo(ammotype) > 0)
         {
+           // Debug.Log(audioSource);
+            //audioSource.PlayOneShot(clip);
+            audioSource.PlayOneShot( ammoSlot.GetAudioClip(ammotype)as AudioClip);
             PlayMuzzleFlash();
             ProcessRaycast();
             ammoSlot.reduceCurrentAmmo(ammotype);
@@ -68,5 +81,11 @@ public class Weapons : MonoBehaviour
         GameObject impact = Instantiate(hitEffects, hit.point, Quaternion.LookRotation(hit.normal));
         //  Debug.Log("Impact ppos" + impact.transform.position);
         Destroy(impact, .1f);
+    }
+
+    void DisplayAmmo()
+    {
+        int currentAmmo = ammoSlot.GetCurrentAmmo(ammotype);
+        ammoText.text = currentAmmo.ToString();
     }
 }

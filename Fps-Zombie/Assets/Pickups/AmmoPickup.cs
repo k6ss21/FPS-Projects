@@ -7,6 +7,8 @@ public class AmmoPickup : MonoBehaviour
 
     [SerializeField] int ammoAmmout = 10;
     [SerializeField] Ammotype ammotype;
+
+    
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
